@@ -46,9 +46,6 @@ client.connect(err => {
 
 
 
-
-
-
 app.delete('/deleteUserEvent/:id', (req, res) => {
   eventCollection.deleteOne({eventId:req.params.id})
   .then((result) => {
@@ -56,9 +53,6 @@ app.delete('/deleteUserEvent/:id', (req, res) => {
     res.send(result.deletedCount > 0)
   })
 })
-
-
-
 
 
 
